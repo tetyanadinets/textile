@@ -1,0 +1,123 @@
+.header
+	width 100%
+	background #fff
+	position absolute
+	left 0
+	top 0
+	color #000
+	z-index 999
+	&__container
+		height 64px
+		margin 0 auto
+		padding 0 35px
+		display flex
+		align-items center
+		justify-content space-between
+		a
+			display block
+		.perfect
+			width 140px
+			margin-left 25px
+			padding-left 20px
+			border-left 1px solid #cccccc
+	&__nav
+		display flex
+		ul
+			width 100%
+			display flex
+		li
+			display inline-block
+			margin 0 15px
+		a
+			font-size 15px
+			text-decoration none
+			color $color
+			margin-right 30px
+			transition all .3s ease
+			&:hover
+				color #000
+			&:last-child
+				margin-right 0
+			&.active
+				text-decoration none
+				color #f57b0a
+	.lang-nav
+		margin-right 100px
+	.search
+		margin-left 30px
+		transition transform .3s ease
+		&:hover
+			transform scale(1.1)
+
+	.basket
+		text-decoration none
+		position relative
+		&__count
+			position absolute
+			display inline-block
+			background-color #9F2628
+			border-radius 50%
+			font-size 10px
+			color #fff
+			font-weight bold
+			padding 5px
+			top -6px
+			left 10px
+		&__name
+			margin-left 10px
+		svg
+			transition transform .3s ease
+		&:hover
+			svg
+				transform scale(1.1)
+
+
+
+	.account
+		font-weight bold
+		padding 6px 20px
+		-webkit-border-radius 10%
+		border-radius 10%
+		border 2px dashed rgba(0, 0, 0, 0.5)
+		text-decoration none
+		transition all .3s ease
+		color $color
+		&:hover
+			border-style solid
+
+.socials
+	display flex
+	-webkit-justify-content space-between
+	justify-content space-between
+	-webkit-align-items center
+	align-items center
+	.svg_social
+		fill black
+		fill-opacity 0.5
+	a
+		margin-right 16px
+		transition opacity .3s ease
+		&:last-child
+			margin-right 0
+		&:hover
+			opacity 0.8
+
+
+.lang-nav
+	.switcher
+		width 55px
+		display flex
+		-webkit-justify-content space-between
+		justify-content space-between
+		-webkit-align-items center
+		align-items center
+		li
+			&.active
+				a
+					font-weight bold
+		a, span
+			text-decoration none
+			cursor pointer
+			transition all .3s ease
+			&:hover
+				font-weight bold

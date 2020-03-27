@@ -1,0 +1,45 @@
+mixin footer(data)
+	+b.FOOTER.footer
+		.container
+			+e.row
+				+e.col
+					+e.A(href="").title Про Компанію
+					a(href="") Власне Виробництво
+					a(href="") Новини
+					a(href="") Доставка і Оплата
+					a(href="") Контакти
+					a(href="") FAQ
+					a(href="") Політика Конфіденційності
+				+e.col
+					+e.A(href="").title Каталог Товарів
+					a(href="") Новинки
+					a(href="") Топ Продаж
+					a(href="") Кращі Товари по Рейтингу
+					a(href="") Акції
+					a(href="") Всі Тканини
+					a(href="") Для дому
+					a(href="") Для одягу
+					a(href="") Спеціальні Тканини
+					a(href="") Хутро
+				+e.col
+					+e.A(href="").title Особистий Кабінет
+					a(href="") Створення Особистого Кабінету
+					a(href="") Логін
+				+e.col
+					+b.lang-nav
+						ul.switcher
+							li.item-language-main
+								span Укр
+							li.active: a(href="") Рус
+					.socials.socials_footer
+						a(href="" target="_blank").fb
+							include ../../static/img/svg/icons/fb.svg
+						a(href="" target="_blank").ln
+							include ../../static/img/svg/icons/linkedin.svg
+						a(href="" target="_blank").yt
+							include ../../static/img/svg/icons/youtube.svg
+						a(href="" target="_blank").insta
+							include ../../static/img/svg/icons/insta.svg
+		.container
+			small Copyright &copy; 2020 ТК-ДОМАШНІЙ ТЕКСТИЛЬ
+

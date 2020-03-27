@@ -1,0 +1,41 @@
+//  == media mixin
+mw($media = 1700px, $above = false)
+	if($above)
+		@media (min-width $media)
+			{block}
+	else
+		@media (max-width $media)
+			{block}
+
+mh($media = 600px, $above = false)
+	if($above)
+		@media (min-height $media)
+			{block}
+	else
+		@media (max-height $media)
+			{block}
+
+// == other
+
+
+
+bg()
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+
+
+customScroll($w = 4px, $bgt = $color2, $b = 0px, $bg = $color )
+	overflow auto
+	@media (min-width:1241px)
+		&::-webkit-scrollbar
+			width $w
+
+		&::-webkit-scrollbar-track
+			background $bgt
+			border $b
+
+		&::-webkit-scrollbar-thumb
+			background $bg
+
+		-ms-overflow-style -ms-autohiding-scrollbar

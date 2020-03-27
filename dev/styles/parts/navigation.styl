@@ -1,0 +1,39 @@
+.pagination
+	margin 15px 0
+	text-align center
+	ul
+		list-style none
+		margin 0
+		padding 0
+		display flex
+		align-items center
+		justify-content center
+	a, span
+		display block
+		width 40px
+		height 40px
+		line-height 40px
+		color #02448b
+		font-weight bold
+		text-decoration none
+		&:hover 
+			box-shadow: inset 0 0 0 1px #3b73b5
+			svg 
+				stroke #3b73b5
+	.current
+		a, span
+			color #fff
+			background #3b73b5		
+	
+	.icon
+		fill none
+		stroke #d7d7d7
+		width 20px
+		height 16px
+			
+
+@media (max-width:600px)
+	.pagination a, .pagination span
+		width 30px
+		height 30px
+		line-height 30px

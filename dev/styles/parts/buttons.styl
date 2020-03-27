@@ -1,0 +1,125 @@
+[type="submit"]
+	border 0
+
+.btns 
+	display flex
+	flex-wrap wrap
+	a
+		flex 1
+		display flex
+		margin-bottom 5px
+		align-items center
+		justify-content center
+		margin-right 15px
+		max-width 250px
+
+.btn
+	display inline-block
+	padding 11px 16px
+	text-align center
+	text-decoration none
+	font-size 14px
+	font-weight bold
+	background none
+	cursor pointer
+	border 1px solid $color
+	transition  .3s
+	&:hover
+		color #fff
+		background $color
+
+.btn-fill
+	display inline-block
+	padding 11px 16px
+	text-align center
+	text-decoration none
+	font-size 14px
+	font-weight bold
+	background none
+	cursor pointer
+	color #fff
+	background $color
+	border 1px solid $color
+	transition  .3s
+	&:hover
+		color $color
+		background none	
+
+.btn-success
+	display inline-block
+	padding 15px 16px
+	text-align center
+	text-decoration none
+	font-size 14px
+	font-weight bold
+	background transparent
+	border 1px solid #43a660
+	transition .3s
+	&:hover
+		color #fff
+		background #43a660
+		
+.btn-err
+	display inline-block
+	padding 15px 16px
+	text-align center
+	text-decoration none
+	font-size 14px
+	font-weight bold
+	background transparent
+	border 1px solid #9b3939
+	transition .3s
+	&:hover
+		color #fff
+		background #9b3939
+		
+.btn, .btn-success, .btn-err
+	flex-shrink 0
+	&.ok 
+		min-width 90px
+		padding-top 12px
+		padding-bottom 12px
+		text-transform uppercase
+	&.across span
+		&:after
+			content:'\00D7'
+			margin-left 15px	
+			
+	&.go span
+		&:after
+			content:'\2192'
+			margin-left 15px
+			
+
+
+/* == media == */
+// @media $xlg
+
+// @media $lg
+
+// @media $md
+
+@media $sm
+	.btns  a
+		flex 1
+		
+	.btn-success
+		display block
+		margin 0 auto
+		width 230px
+
+@media $xs
+	.content, .popup
+		.btn, .btn-success, .btn-err
+			display block
+			width 300px
+			max-width 100%
+			margin 0 auto 10px
+			padding 15px
+		.btns
+			display block
+			a
+				display block
+				width 300px
+				max-width 100%
+				margin 0 auto 10px

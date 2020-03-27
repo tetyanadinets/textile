@@ -1,0 +1,38 @@
+mixin header(data)
+	+b.HEADER.header#header
+		+e.container.container
+
+			+e.NAV.nav.headerNav
+				a(href="/") Про компанію
+				a(href="/") Каталог
+				a(href="/") Питання та Відповіді
+
+			+b.lang-nav
+				ul.switcher
+					li.item-language-main
+						span Укр
+					li.active: a(href="") Рус
+
+			a.logo(href="/"): img(src="img/logo.png", alt="logo")
+
+			a(href="").search
+				include ../../static/img/svg/icons/search.svg
+
+			a(href="").basket
+				include ../../static/img/svg/icons/basket.svg
+				span.basket__count 12
+				span.basket__name Кошик
+
+			a(href="").account Мій кабінет
+
+
+			.socials
+				a(href="" target="_blank").fb
+					include ../../static/img/svg/icons/fb.svg
+				a(href="" target="_blank").ln
+					include ../../static/img/svg/icons/linkedin.svg
+				a(href="" target="_blank").yt
+					include ../../static/img/svg/icons/youtube.svg
+				a(href="" target="_blank").insta
+					include ../../static/img/svg/icons/insta.svg
+

@@ -1,0 +1,69 @@
+mixin form(data)
+	+b.FORM.send-form.sendForm(novalidate)
+		fieldset.form-group
+			.form-half
+				.form-item.valid
+					input(type="text" name="fio")
+					label Ф. И. О. *	
+						span — обязательно для заполнения
+				.form-item.valid
+					input(type="tel" name="tel")
+					label телефон в формате + 380*
+						span — обязательно
+				.form-item.valid
+					input(type="email" name="email")
+					label e- mail
+						span — проверьте правильность написания
+				.form-item.select.valid
+					select(name="topic")
+						option(value="0")
+						option(value="2") Проверка наличия
+						option(value="3") Контакты
+						option(value="4") Ежики
+					label тема обращения
+						span — выбирите тему				
+				.form-item.valid
+					textarea(name="text")
+					label суть обращения
+						span — обязательно для заполнения
+
+			.form-half
+				.form-item.select.valid
+					select(name="city")
+						option(value="0")
+						option(value="1") Киев
+						option(value="2") Чабаны
+						option(value="3") Херсон
+						option(value="4") Днепр
+					label город*
+						span — выбирите город
+				.form-item.select.valid
+					select(name="address")
+						option(value="0") 
+						option(value="1") Улица 1
+						option(value="2") Улица 2
+						option(value="3") Улица 3
+						option(value="4") ул. Дорнавза-польского
+					label адрес магазина*	
+						span — выбирите улицу				
+				.form-item.valid
+					input(type="text" name="date")
+					label дата события
+						span — обязательно для заполнения					
+				.form-item
+					div.in-text
+						input(type="file")
+						span добавить изображение
+
+		.form-check.valid
+			input#check(type="checkbox")
+			label(for="check") Согласен с правилами сбора, сохранения и обработки персональных данных.
+
+
+		.form-action
+			button.btn(type="submit") отправить
+
+		.form-thank.formThanks
+			div.wrap
+				h4 Спасибо вам 
+				p мы вам обязателно перезвоним

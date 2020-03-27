@@ -1,0 +1,112 @@
+
+// plaseholders
+input::-webkit-input-placeholder
+	color $color
+input::-moz-placeholder
+	color $color
+input:-moz-placeholder
+	color $color
+input:-ms-input-placeholder
+	color $color
+
+input:focus::-webkit-input-placeholder
+	opacity 0
+input:focus:-moz-placeholder
+	opacity 0
+input:focus::-moz-placeholder
+	opacity 0
+input:focus:-ms-input-placeholder
+	opacity 0
+
+
+
+input:not([type="checkbox"]):not([type="radio"]), textarea
+	display block
+	width 100%
+textarea
+	resize none
+
+.send-form, .webform-client-form
+	position relative
+	font-size 20px
+	color $color
+
+.form-item
+	position relative
+	width calc(25% - 20px)
+	margin-right 20px
+	&.active label
+		opacity 0
+	&.error
+		input
+			border-color red
+		&:after
+			opacity 1
+		label, .in-text
+			color red
+			span
+				opacity 1
+	input
+		display block
+		width 100%
+		background #fff
+		border none
+		outline none
+		padding 10px 8px
+		border 2px dashed #FFF
+		transition all .3s ease
+		font-size 18px
+	label
+		position absolute
+		left 15px
+		bottom 15px
+		color $color
+		font-size 1.28rem
+		line-height 1
+		span
+			color red
+			padding-left 3px
+
+	input, textarea, select
+		&:focus + label
+			// transform translateY(-1.6em) scale(0.85)
+			opacity 0
+
+input:focus
+	border 2px dashed #000000
+
+.form-action
+	position  relative
+	text-align  center
+	width calc(25% - 20px)
+	cursor pointer
+	transition opacity .3s ease
+	font-size 18px
+	[type='submit'], input[type='submit']
+		border 0
+		outline  none
+		display  inline-block
+		background-color #000
+		color #FFF
+		padding 12px
+		width 100%
+	&:hover
+		opacity 0.8
+
+
+
+.send-form__item, .send-form__check
+	&.error
+		background none
+
+
+/* == media == */
+// @media $xlg
+
+// @media $lg
+
+// @media $md
+
+// @media $sm
+
+// @media $xs

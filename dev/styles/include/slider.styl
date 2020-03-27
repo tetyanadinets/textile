@@ -1,0 +1,35 @@
+.pagination
+	.swiper-pagination-bullet
+		border 1px solid #000
+		background transparent
+		opacity 1
+		width 12px
+		height 12px
+		&.swiper-pagination-bullet-active
+			background #c4c4c4
+
+.swiper-container-horizontal>.swiper-pagination-bullets
+	bottom 26px
+
+.arr
+	position absolute
+	cursor pointer
+	top 51.5%
+	-webkit-transform translateY(-50%)
+	-moz-transform translateY(-50%)
+	-ms-transform translateY(-50%)
+	-o-transform translateY(-50%)
+	transform translateY(-50%)
+	z-index 9
+	svg
+		fill #000
+		transition opacity .3 ease
+	&:hover
+		svg
+			opacity 0.8
+	&_prev
+		left 4px
+
+	&_next
+		right 4px
+		transform rotate(180deg)
