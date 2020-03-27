@@ -95,7 +95,8 @@ module.exports = class Common {
 
 		$('.card__color').on('mouseleave', function(e){
 			var img = $(this).parents('.card').find('.card__img');
-			var src = $('.card__color.active').data('img');
+			var src = $(this).parents('.card').find('.card__color.active').data('img');
+
 			img.css('background-image', src)
 		});
 
